@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.flex-rosto,
+h2 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    width: 100vh;
+    height: 100vh;
+    background: #111;
+}
+
+.svgBox {
+    width: 300px;
+    height: 200px;
+}
+
+.svgBox svg {
+    fill: none;
+    stroke-width: 10;
+    stroke: url(#rosto);
+    transform: scale(2);
+    stroke-dasharray: 60 172;
+    stroke-linecap: round;
+    animation: rosty 3s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes rosty {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 232;
+    }
+}
+
+.svgBox svg:nth-of-type(1) {
+    animation: none;
+    stroke: #222;
+    stroke-dasharray: none;
+}
+
+.svgBox svg:nth-of-type(2) {
+    filter: blur(10px);
+}
+
+h2 {
+    font-size: 3rem;
+    position: absolute;
+    margin-top: 200px;
+    margin-right: 200px;
+    margin-right: 200px;
+    stroke: url(#rosto);
+    color: orange;
+}
